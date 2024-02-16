@@ -1,0 +1,11 @@
+mysql_employee:
+  target: dev
+  outputs:
+    dev:
+      type: mysql
+      server: employees-mysql
+      port: 3306
+      schema: employees
+      username: nihadtp
+      password: password
+      ssl_disabled: True

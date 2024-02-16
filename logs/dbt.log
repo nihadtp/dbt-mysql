@@ -1,0 +1,77 @@
+[0m21:17:50.149202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d7b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127a71c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127a7130>]}
+
+
+============================== 21:17:50.152595 | 1a4cf622-fdd6-4d41-a315-1abd10770313 ==============================
+[0m21:17:50.152595 [info ] [MainThread]: Running with dbt=1.7.8
+[0m21:17:50.153048 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/nihadtp/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init mysql-employee', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:17:50.153419 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/nihadtp/.dbt')}
+[0m21:17:50.153630 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m21:18:19.331767 [debug] [MainThread]: Starter project path: /Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m21:18:19.350907 [info ] [MainThread]: 
+Your new dbt project "mysql_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:18:19.355389 [info ] [MainThread]: Setting up your profile.
+[0m21:18:45.260174 [error] [MainThread]: Encountered an error:
+
+[0m21:18:45.266261 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m21:18:45.421538 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 55.301273, "process_user_time": 1.0005, "process_kernel_time": 0.147606, "process_mem_max_rss": "103923712", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:18:45.423048 [debug] [MainThread]: Command `dbt init` failed at 21:18:45.422699 after 55.30 seconds
+[0m21:18:45.424094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d7b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127a7190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127a7370>]}
+[0m21:18:45.425211 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-02-16 05:29:57.810701 | b382bc17-a046-4acc-9d31-733a920c4bbb ==============================
+05:29:57.810706 [info ] [MainThread]: Running with dbt=1.1.5
+05:29:57.811041 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/nihadtp/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'mysql-employee', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+05:29:57.811117 [debug] [MainThread]: Tracking: tracking
+05:29:57.830413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10586f850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105707fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10586f1f0>]}
+05:30:07.370355 [debug] [MainThread]: Starter project path: /Users/nihadtp/Downloads/My Projects/dbt-employees/dbt-env/lib/python3.8/site-packages/dbt/include/starter_project
+05:30:16.343551 [info ] [MainThread]: Profile mysql_employee written to /Users/nihadtp/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+05:30:16.344016 [info ] [MainThread]: 
+Your new dbt project "mysql_employee" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+05:30:16.344304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105707fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059f10d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059f1100>]}
