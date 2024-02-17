@@ -1,5 +1,5 @@
 
-# version: 2
+version: 2
 
 # models:
 #   - name: my_first_dbt_model
@@ -19,3 +19,17 @@
 #         tests:
 #           - unique
 #           - not_null
+sources:
+  - name: landing
+    schema: employees
+    tables:
+      - name: employees
+        identifier: employees
+        description: "A table of employees"
+      - name: dept_emp
+        identifier: dept_emp
+        description: "A table of departments epmloyees relationship"
+      - name: departments
+        identifier: departments
+        description: "A table of department information"
+        

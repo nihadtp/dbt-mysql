@@ -35,6 +35,11 @@ models:
   mysql_employee:
     # Config indicated by + and applies to all files under models/example/
     stg_employee:
-      +materialized: view
+      materialized: view
       schema: staging
       database: employees
+    dept_emp_dist:
+      materialized: table
+      database: employees
+    
+      
