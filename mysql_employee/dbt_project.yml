@@ -34,5 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   mysql_employee:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    stg_employee:
       +materialized: view
+      schema: staging
+      database: employees

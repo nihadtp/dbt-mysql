@@ -5,7 +5,7 @@ mysql_employee:
       type: mysql
       server: employees-mysql
       port: 3306
-      schema: employees
-      username: nihadtp
+      schema: datamart
+      username: root
       password: password
       ssl_disabled: True
