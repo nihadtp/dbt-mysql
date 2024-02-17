@@ -1,0 +1,1 @@
+SELECT dept_no, Department FROM {{ref('dept_emp_dist')}} where Counts < 0

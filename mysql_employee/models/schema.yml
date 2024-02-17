@@ -1,24 +1,6 @@
 
 version: 2
 
-# models:
-#   - name: my_first_dbt_model
-#     description: "A starter dbt model"
-#     columns:
-#       - name: id
-#         description: "The primary key for this table"
-#         tests:
-#           - unique
-#           - not_null
-
-#   - name: my_second_dbt_model
-#     description: "A starter dbt model"
-#     columns:
-#       - name: id
-#         description: "The primary key for this table"
-#         tests:
-#           - unique
-#           - not_null
 sources:
   - name: landing
     schema: employees
@@ -26,10 +8,38 @@ sources:
       - name: employees
         identifier: employees
         description: "A table of employees"
+        columns:
+          - name: first_name
+            description: "First Name of the Employee"
+            tests:
+              - string_not_empty
+          
       - name: dept_emp
         identifier: dept_emp
         description: "A table of departments epmloyees relationship"
       - name: departments
         identifier: departments
         description: "A table of department information"
+
+
+models:
+  - name: dept_emp_dist
+    description: "NUmber of employees per department"
+    columns:
+      - name: Department
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+      - name: dept_no
+        description: "The primary key for this table"
+        tests:
+          - relationship: 
+              to: ref('landing', 'departments')
+              field: dept_no
+         
+
+
+
         
