@@ -49,7 +49,14 @@ models:
           - relationship: 
               to: ref('landing', 'departments')
               field: dept_no
-         
-
-
-
+  - name: stg_salary_cur
+    description: "Current salaries of employees"
+    columns:
+      - name: emp_no
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - relationship: 
+              to: ref('stg_employee_current')
+              field: emp_no  

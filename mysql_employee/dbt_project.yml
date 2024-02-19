@@ -38,6 +38,10 @@ models:
       materialized: view
       schema: staging
       database: employees
+    stg_salary_curr:
+      materialized: view
+      schema: staging
+      database: employees
     stg_employee_current:
       materialized: view
       schema: staging
@@ -52,8 +56,11 @@ models:
     avg_salary_by_title:
       materialized: table
       database: employees
-      avg_tenure_by_dept:
-        materialized: table
-        database: employees
+    avg_tenure_by_dept:
+      materialized: table
+      database: employees
+    top_dept_earning_curr:
+      materialized: table
+      database: employees
     
       
