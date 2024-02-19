@@ -17,5 +17,3 @@ services:
     command: ["tail", "-f", "/dev/null"]
     depends_on:
       - employees-mysql
-    
-

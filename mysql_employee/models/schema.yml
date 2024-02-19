@@ -13,6 +13,11 @@ sources:
             description: "First Name of the Employee"
             tests:
               - string_not_empty
+          - name: gender
+            description: "Gnerder of the Employee"
+            tests:
+              - accepted_values: 
+                  values: ['M', 'F']
           
       - name: dept_emp
         identifier: dept_emp
@@ -20,6 +25,12 @@ sources:
       - name: departments
         identifier: departments
         description: "A table of department information"
+      - name: titles
+        identifier: titles
+        description: "A table of employee titles"
+      - name: salaries
+        identifier: salaries
+        description: "A table of employee salaries"
 
 
 models:
@@ -42,4 +53,3 @@ models:
 
 
 
-        

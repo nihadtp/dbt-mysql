@@ -38,7 +38,14 @@ models:
       materialized: view
       schema: staging
       database: employees
+    stg_emp_title:
+      materialized: view
+      schema: staging
+      database: employees
     dept_emp_dist:
+      materialized: table
+      database: employees
+    avg_salary_by_title:
       materialized: table
       database: employees
     
