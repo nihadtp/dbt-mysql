@@ -1,4 +1,4 @@
-# Project Name
+# DBT MySQL - Employee
 
 This project utilizes MySQL server and DBT for data modeling purposes. It builds upon an existing employee database in MySQL, creating staging and data mart databases, and implementing data models within these layers. Both MySQL server and DBT server are containerized using Docker, and a docker-compose file is provided to set up both containers.
 
@@ -16,7 +16,13 @@ To get started with the project, follow these steps:
     ```bash
     docker compose up
     ```
-4. Once the containers are up and running, you can start working with the data models.
+4. Once the containers are up and running:
+   - To view DBT documentation, go to [http://localhost:8080](http://localhost:8080) in your web browser.
+   - To connect to the MySQL database using external tools like Tableau, use the following credentials:
+     - Host: localhost
+     - Port: 3306
+     - Username: root
+     - Password: password
 
 ## Project Structure
 
