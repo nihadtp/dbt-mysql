@@ -108,7 +108,11 @@ RUN python -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_
 # dbt-third-party
 ##
 FROM dbt-core as dbt-third-party
+RUN mkdir -p /usr/signal
 RUN python -m pip install --no-cache-dir "${dbt_third_party}"
+COPY entrypoint.sh /usr/entrypoint.sh
+RUN chmod +x /usr/entrypoint.sh
+
 
 
 ##

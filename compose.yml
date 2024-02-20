@@ -1,6 +1,8 @@
 services:
   employees-mysql:
-    image: nihadtp/mysql:v1
+    image: nihadtp/mysql:v2
+    entrypoint: ["docker-entrypoint.sh"]
+    command: ["mysqld"]
     ports:
       - "3306:3306"
     environment:
@@ -10,12 +12,12 @@ services:
       - MYSQL_PASSWORD=password
 
   dbt-mysql:
-    image: nihadtp/dbt_employees:v1
+    image: nihadtp/dbt_employees:v2
     ports:
       - "8080:8080"
     volumes:
       - ${PWD}/mysql_employee:/usr/app
       - ${PWD}/profiles.yml:/root/.dbt/profiles.yml
-    command: ["tail", "-f", "/dev/null"]
+    entrypoint: ["/usr/entrypoint.sh"]
     depends_on:
       - employees-mysql
